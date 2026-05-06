@@ -6,6 +6,7 @@ import { ThemeProvider } from "@/components/theme-provider";
 import { hasLocale, NextIntlClientProvider } from "next-intl";
 import { routing } from "@/i18n/routing";
 import { notFound } from "next/navigation";
+import NavigationBar from "@/components/layout/navbar/NavigationBar";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -52,7 +53,10 @@ export default async function RootLayout({ children, params }: Props) {
           disableTransitionOnChange
           enableSystem={false}
         >
-          <NextIntlClientProvider>{children}</NextIntlClientProvider>
+          <NextIntlClientProvider>
+            <NavigationBar />
+            {children}
+          </NextIntlClientProvider>
         </ThemeProvider>
       </body>
     </html>
