@@ -1,3 +1,24 @@
 {
-  "hello": "Olá, mundo!"
+  "Layout": {
+    "Topbar": {
+      "freeShipping": "Frete e devoluções grátis em todas as encomendas."
+    },
+    "NavigationBar": {
+      "Links": {
+        "newArrivals": "Novidades",
+        "women": "Mulher",
+        "men": "Homem",
+        "accessories": "Acessórios",
+        "collections": "Coleções",
+        "sale": "Promoções"
+      },
+      "Alt": {
+        "cart": "Carrinho",
+        "account": "Conta",
+        "search": "Buscar",
+        "favorites": "Favoritos",
+        "language": "Idioma"
+      }
+    }
+  }
 }
