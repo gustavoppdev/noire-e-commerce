@@ -1,7 +1,11 @@
 {
   "Layout": {
     "Topbar": {
-      "freeShipping": "Frete e devoluções grátis em todas as encomendas."
+      "freeShipping": "Frete e devoluções grátis em todas as encomendas.",
+      "Alt": {
+        "next": "Próximo",
+        "prev": "Anterior"
+      }
     },
     "NavigationBar": {
       "Links": {
@@ -18,6 +22,17 @@
         "search": "Buscar",
         "favorites": "Favoritos",
         "language": "Idioma"
+      }
+    }
+  },
+  "Sections": {
+    "Hero": {
+      "introduction": "PRIMAVERA / VERÃO 2024",
+      "title": "<title1>Minimalismo</title1><title2>Atemporal</title2>",
+      "description": "<description1>Essenciais elevados. Silhuetas contemporâneas.</description1> <description2>Criados para uma vida de distinção discreta.</description2>",
+      "buttons": {
+        "women": "Feminino",
+        "men": "Masculino"
       }
     }
   }

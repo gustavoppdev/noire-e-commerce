@@ -1,7 +1,11 @@
 {
   "Layout": {
     "Topbar": {
-      "freeShipping": "Free shipping and returns on all orders."
+      "freeShipping": "Free shipping and returns on all orders.",
+      "Alt": {
+        "next": "Next",
+        "prev": "Previous"
+      }
     },
     "NavigationBar": {
       "Links": {
@@ -18,6 +22,17 @@
         "search": "Search",
         "favorites": "Favorites",
         "language": "Language"
+      }
+    }
+  },
+  "Sections": {
+    "Hero": {
+      "introduction": "SPRING / SUMMER 2024",
+      "title": "<title1>Timeless</title1><title2>Minimalism</title2>",
+      "description": "<description1>Elevated essentials. Contemporary silhouettes.</description1> <description2>Designed for a life of quiet distinction.</description2>",
+      "buttons": {
+        "women": "SHOP WOMEN",
+        "men": "SHOP MEN"
       }
     }
   }
