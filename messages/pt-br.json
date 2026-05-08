@@ -38,6 +38,12 @@
     "FeaturedCollection": {
       "title": "Coleção em Destaque",
       "button": "EXPLORAR COLEÇÃO"
+    },
+    "About": {
+      "introduction": "Sobre a Noiré",
+      "title": "<title1>Luxo Discreto</title1><title2>Design com Significado</title2>",
+      "description": "Na Noiré, acreditamos que o verdadeiro luxo reside na simplicidade, no artesanato e no design atemporal. Cada peça é pensada para transcender estações e tendências — um guarda-roupa para a vida.",
+      "button": "DESCUBRA NOSSA HISTÓRIA"
     }
   }
 }
