@@ -27,7 +27,7 @@ const NavigationBar = () => {
         <ul className="hidden lg:flex items-center uppercase gap-4 ">
           {NavigationLinks.map((link) => (
             <li key={link.label}>
-              <Button variant={"link"} asChild>
+              <Button variant={"link"} className="font-semibold" asChild>
                 <Link href={link.href}>{t(`Links.${link.label}`)}</Link>
               </Button>
             </li>

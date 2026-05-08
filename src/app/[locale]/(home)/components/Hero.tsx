@@ -22,7 +22,7 @@ const Hero = () => {
       />
       <div
         className="absolute inset-0 
-      grid place-items-center justify-items-start backdrop-blur-[2px] md:backdrop-blur-none bg-linear-to-r from-white/50 via-white/60 to-transparent md:from-white/30 md:via-white/20 md:to-transparent"
+      grid place-items-center justify-items-start backdrop-blur-[2px] bg-linear-to-r from-white/50 via-white/60 to-transparent md:from-white/30 md:via-white/20 md:to-transparent"
       >
         <div className="section-container w-full">
           <div className="flex flex-col max-w-[500px] text-pretty">
@@ -50,13 +50,10 @@ const Hero = () => {
               })}
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button className="rounded-none h-[48px] px-8 text-xs font-bold tracking-widest uppercase w-full sm:w-[160px] bg-black text-white hover:bg-black/90">
+              <Button className="w-full sm:w-[160px]">
                 {t("buttons.women")}
               </Button>
-              <Button
-                variant={"outline"}
-                className="rounded-none h-[48px] px-8 text-xs font-bold tracking-widest uppercase w-full sm:w-[160px] border border-black text-black bg-transparent hover:bg-black/5"
-              >
+              <Button variant="outline" className="w-full sm:w-[160px]">
                 {t("buttons.men")}
               </Button>
             </div>

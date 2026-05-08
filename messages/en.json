@@ -38,6 +38,12 @@
     "FeaturedCollection": {
       "title": "Featured Collection",
       "button": "SHOP COLLECTION"
+    },
+    "About": {
+      "introduction": "About Noiré",
+      "title": "<title1>Quiet Luxury</title1><title2>Meaningful Design</title2>",
+      "description": "At Noiré, we believe true luxury lies in simplicity, craftsmanship, and timeless design. Each piece is thoughtfully created to transcend seasons and trends — a wardrobe for life.",
+      "button": "DISCOVER OUR STORY"
     }
   }
 }
