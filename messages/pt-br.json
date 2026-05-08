@@ -34,6 +34,10 @@
         "women": "Feminino",
         "men": "Masculino"
       }
+    },
+    "FeaturedCollection": {
+      "title": "Coleção em Destaque",
+      "button": "EXPLORAR COLEÇÃO"
     }
   }
 }
