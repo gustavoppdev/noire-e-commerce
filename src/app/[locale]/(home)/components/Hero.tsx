@@ -25,7 +25,7 @@ const Hero = () => {
       grid place-items-center justify-items-start backdrop-blur-[2px] md:backdrop-blur-none bg-linear-to-r from-white/50 via-white/60 to-transparent md:from-white/30 md:via-white/20 md:to-transparent"
       >
         <div className="section-container w-full">
-          <div className="flex flex-col max-w-[500px]">
+          <div className="flex flex-col max-w-[500px] text-pretty">
             <p className="text-xs font-medium tracking-[0.15em] uppercase mb-4 text-black/80 xl:text-sm">
               {t("introduction")}
             </p>

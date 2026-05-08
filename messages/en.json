@@ -34,6 +34,10 @@
         "women": "SHOP WOMEN",
         "men": "SHOP MEN"
       }
+    },
+    "FeaturedCollection": {
+      "title": "Featured Collection",
+      "button": "SHOP COLLECTION"
     }
   }
 }
