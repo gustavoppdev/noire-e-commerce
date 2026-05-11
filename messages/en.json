@@ -45,5 +45,63 @@
       "description": "At Noiré, we believe true luxury lies in simplicity, craftsmanship, and timeless design. Each piece is thoughtfully created to transcend seasons and trends — a wardrobe for life.",
       "button": "DISCOVER OUR STORY"
     }
+  },
+  "Auth": {
+    "SignIn": {
+      "title": "Welcome back",
+      "description": "Sign in to your account to access your orders, wishes and preferences.",
+      "breadcrumb": "Home / Sign In",
+      "submitButton": "Sign In",
+      "prompt": "Don't have an account?",
+      "promptLink": "Create Account",
+      "promptHref": "/auth/sign-up"
+    },
+    "SignUp": {
+      "title": "Create Account",
+      "description": "Join Noiré and be the first to discover new arrivals, exclusive offers and more.",
+      "breadcrumb": "Home / Create Account",
+      "submitButton": "Create Account",
+      "prompt": "Already have an account?",
+      "promptLink": "Sign In",
+      "promptHref": "/auth/sign-in"
+    },
+    "Form": {
+      "fullname": "Full Name",
+      "fullnamePlaceholder": "Enter your full name",
+      "email": "Email Address",
+      "emailPlaceholder": "Enter your email",
+      "password": "Password",
+      "passwordPlaceholder": "Create a password",
+      "confirmPassword": "Confirm Password",
+      "confirmPasswordPlaceholder": "Confirm your password",
+      "checkboxLabel": "I agree to receive marketing emails and updates from NOIRÉ.",
+      "or": "OR",
+      "continueWithGoogle": "Continue with Google"
+    },
+    "Errors": {
+      "minLengthName": "Name must be at least 2 characters.",
+      "maxLengthName": "Name must be at most 100 characters.",
+      "invalidNameCharacters": "Name can only contain letters, spaces, hyphens, and apostrophes.",
+      "emailRequired": "Email is required.",
+      "nameRequired": "Name is required.",
+      "maxLengthEmail": "Email must be at most 255 characters.",
+      "invalidEmail": "Please enter a valid email address.",
+      "passwordTooShort": "Password must be at least 6 characters.",
+      "passwordTooLong": "Password must be at most 100 characters.",
+      "passwordComplexity": "Password must include at least one uppercase letter, one lowercase letter, and one number.",
+      "passwordsDoNotMatch": "Passwords do not match.",
+      "confirmPasswordRequired": "Please confirm your password."
+    },
+    "Confirmation": {
+      "title": "Check Your Email",
+      "message": "We've sent a confirmation link to your email address. Please check your inbox and click the link to verify your account.",
+      "backToHome": "Back to Home"
+    },
+    "AuthCodeError": {
+      "title": "Confirmation Code Expired",
+      "message": "The link used to confirm your account has expired or is invalid. Please request a new confirmation link.",
+      "backToHome": "Back to Home",
+      "registerAgain": "Register Again"
+    }
   }
 }

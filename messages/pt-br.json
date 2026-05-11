@@ -45,5 +45,63 @@
       "description": "Na Noiré, acreditamos que o verdadeiro luxo reside na simplicidade, no artesanato e no design atemporal. Cada peça é pensada para transcender estações e tendências — um guarda-roupa para a vida.",
       "button": "DESCUBRA NOSSA HISTÓRIA"
     }
+  },
+  "Auth": {
+    "SignIn": {
+      "title": "Bem-vindo de volta",
+      "description": "Entre na sua conta para acessar seus pedidos, desejos e preferências.",
+      "breadcrumb": "Início / Entrar",
+      "submitButton": "Entrar",
+      "prompt": "Ainda não tem uma conta?",
+      "promptLink": "Criar Conta",
+      "promptHref": "/auth/sign-up"
+    },
+    "SignUp": {
+      "title": "Criar uma conta",
+      "description": "Junte-se à Noiré e seja o primeiro a descobrir novos lançamentos, ofertas exclusivas e muito mais.",
+      "breadcrumb": "Início / Criar Conta",
+      "submitButton": "Criar Conta",
+      "prompt": "Já tem uma conta?",
+      "promptLink": "Entrar",
+      "promptHref": "/auth/sign-in"
+    },
+    "Form": {
+      "fullname": "Nome Completo",
+      "fullnamePlaceholder": "Digite seu nome completo",
+      "email": "Endereço de E-mail",
+      "emailPlaceholder": "Digite seu e-mail",
+      "password": "Senha",
+      "passwordPlaceholder": "Digite sua senha",
+      "confirmPassword": "Confirmar Senha",
+      "confirmPasswordPlaceholder": "Confirme sua senha",
+      "checkboxLabel": "Concordo em receber e-mails de marketing e atualizações da NOIRÉ.",
+      "or": "OU",
+      "continueWithGoogle": "Continuar com o Google"
+    },
+    "Errors": {
+      "minLengthName": "O nome deve ter pelo menos 2 caracteres.",
+      "maxLengthName": "O nome deve ter no máximo 100 caracteres.",
+      "invalidNameCharacters": "O nome pode conter apenas letras, espaços, hifens e apóstrofos.",
+      "emailRequired": "O e-mail é obrigatório.",
+      "nameRequired": "O nome é obrigatório.",
+      "maxLengthEmail": "O e-mail deve ter no máximo 255 caracteres.",
+      "invalidEmail": "Por favor, insira um endereço de e-mail válido.",
+      "passwordTooShort": "A senha deve ter pelo menos 6 caracteres.",
+      "passwordTooLong": "A senha deve ter no máximo 100 caracteres.",
+      "passwordComplexity": "A senha deve conter pelo menos uma letra maiúscula, uma minúscula e um número.",
+      "passwordsDoNotMatch": "As senhas não coincidem.",
+      "confirmPasswordRequired": "Por favor, confirme sua senha."
+    },
+    "Confirmation": {
+      "title": "Verifique Seu E-mail",
+      "message": "Enviamos um link de confirmação para o seu endereço de e-mail. Verifique sua caixa de entrada e clique no link para ativar sua conta.",
+      "backToHome": "Voltar para a Página Inicial"
+    },
+    "AuthCodeError": {
+      "title": "Link de Confirmação Expirado",
+      "message": "O link usado para confirmar sua conta expirou ou é inválido. Por favor, solicite um novo link de confirmação.",
+      "backToHome": "Voltar para a Página Inicial",
+      "registerAgain": "Cadastrar Novamente"
+    }
   }
 }

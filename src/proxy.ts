@@ -1,11 +1,20 @@
-import createMiddleware from "next-intl/middleware";
+import createIntlMiddleware from "next-intl/middleware";
+import { type NextRequest } from "next/server";
 import { routing } from "./i18n/routing";
+import { updateSession } from "@/lib/supabase/proxy";
 
-export default createMiddleware(routing);
+const handleI18nRouting = createIntlMiddleware(routing);
+
+export default async function middleware(request: NextRequest) {
+  // 1. Executa o middleware de internacionalização para lidar com rotas/locales
+  const intlResponse = handleI18nRouting(request);
+
+  // 2. Passa a resposta do next-intl para o Supabase atualizar a sessão (cookies, redirects de auth)
+  return await updateSession(request, intlResponse);
+}
 
 export const config = {
-  // Match all pathnames except for
-  // - … if they start with `/api`, `/trpc`, `/_next` or `/_vercel`
-  // - … the ones containing a dot (e.g. `favicon.ico`)
-  matcher: "/((?!api|trpc|_next|_vercel|.*\\..*).*)",
+  matcher: [
+    "/((?!api|trpc|_next|_vercel|.*\\.(?:svg|png|jpg|jpeg|gif|webp|ico)$).*)",
+  ],
 };

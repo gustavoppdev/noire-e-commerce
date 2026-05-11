@@ -1,8 +1,10 @@
 // Components
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
+import { Link } from "@/i18n/navigation";
 
 // Icons
+
 import { Search, ShoppingBag, User2 } from "lucide-react";
 
 // Next-Intl
@@ -16,8 +18,15 @@ const NavbarIcons = () => {
         <Search className="size-5" strokeWidth={1.8} />
       </Button>
 
-      <Button variant={"ghost"} size={"icon-xs"} aria-label={t("Alt.account")}>
-        <User2 className="size-5" strokeWidth={1.8} />
+      <Button
+        variant={"ghost"}
+        size={"icon-xs"}
+        aria-label={t("Alt.account")}
+        asChild
+      >
+        <Link href={"/auth/sign-in"}>
+          <User2 className="size-5" strokeWidth={1.8} />
+        </Link>
       </Button>
       <Button
         variant={"ghost"}

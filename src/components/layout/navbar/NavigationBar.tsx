@@ -28,7 +28,8 @@ const NavigationBar = () => {
           {NavigationLinks.map((link) => (
             <li key={link.label}>
               <Button variant={"link"} className="font-semibold" asChild>
-                <Link href={link.href}>{t(`Links.${link.label}`)}</Link>
+                {/* eslint-disable-next-line @typescript-eslint/no-explicit-any */}
+                <Link href={link.href as any}>{t(`Links.${link.label}`)}</Link>
               </Button>
             </li>
           ))}
