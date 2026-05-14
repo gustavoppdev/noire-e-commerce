@@ -80,6 +80,8 @@ export function useAuthForm(type: "sign-in" | "sign-up") {
     },
   });
 
+  const { isSubmitting } = form.formState;
+
   const onSubmit = async (data: FormValues) => {
     setServerError(null);
 
@@ -96,8 +98,10 @@ export function useAuthForm(type: "sign-in" | "sign-up") {
     // significa que houve erro
     if (result?.error) {
       setServerError(result.error);
+      // debug
+      alert(result.error);
     }
   };
 
-  return { form, onSubmit, serverError };
+  return { form, onSubmit, serverError, isSubmitting };
 }

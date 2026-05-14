@@ -11,6 +11,13 @@ import { Field, FieldGroup, FieldLabel, FieldSet } from "@/components/ui/field";
 import FormInput from "./FormInput";
 import { useAuthForm } from "@/hooks/useAuthForm";
 import { Controller } from "react-hook-form";
+import {
+  Breadcrumb,
+  BreadcrumbItem,
+  BreadcrumbList,
+  BreadcrumbSeparator,
+} from "@/components/ui/breadcrumb";
+import { Loader2 } from "lucide-react";
 
 type Props = {
   type: "sign-in" | "sign-up";
@@ -21,18 +28,35 @@ const FormAuth = ({ type }: Props) => {
   const t = useTranslations(`Auth.${typeKey}`);
   const tForm = useTranslations("Auth.Form");
 
-  const { form, onSubmit, serverError } = useAuthForm(type);
+  const { form, onSubmit, serverError, isSubmitting } = useAuthForm(type);
 
   return (
-    <div className="w-full flex flex-col items-center justify-center py-12 px-6 lg:px-16 xl:px-24 ">
-      <div className="w-full max-w-[420px] flex flex-col">
+    <div className="w-full flex flex-col items-center justify-center py-12 lg:col-span-3">
+      <div className="w-full max-w-sm flex flex-col">
         {/* Breadcrumbs */}
-        <span className="font-medium text-[11px] text-neutral-500 mb-8 tracking-wide">
-          {t("breadcrumb")}
-        </span>
+        <Breadcrumb>
+          <BreadcrumbList className="font-normal text-neutral-500 mb-8 tracking-wide">
+            {t.rich("breadcrumb", {
+              link1: (chunks) => (
+                <>
+                  <BreadcrumbItem>
+                    <Link href={"/"}> {chunks}</Link>
+                  </BreadcrumbItem>
+                  <BreadcrumbSeparator />
+                </>
+              ),
+              link2: (chunks) => (
+                <BreadcrumbItem>
+                  {/* eslint-disable-next-line @typescript-eslint/no-explicit-any */}
+                  <Link href={t("promptHref") as any}> {chunks}</Link>
+                </BreadcrumbItem>
+              ),
+            })}
+          </BreadcrumbList>
+        </Breadcrumb>
 
         {/* Title */}
-        <h1 className="tracking-tight font-medium text-4xl lg:text-[42px] text-neutral-900 mb-4">
+        <h1 className="tracking-tight font-semibold text-4xl  text-neutral-900 mb-4">
           {t("title")}
         </h1>
 
@@ -86,10 +110,7 @@ const FormAuth = ({ type }: Props) => {
 
               {/* Checkbox */}
               {type === "sign-up" && (
-                <Field
-                  className=" space-x-3 space-y-0 pt-2"
-                  orientation={"horizontal"}
-                >
+                <Field className=" space-x-2 pt-2" orientation={"horizontal"}>
                   <Controller
                     name="marketing"
                     control={form.control}
@@ -104,7 +125,7 @@ const FormAuth = ({ type }: Props) => {
                   />
                   <FieldLabel
                     htmlFor="marketing"
-                    className="text-[13px] text-neutral-800 font-normal leading-snug cursor-pointer"
+                    className="text-sm text-neutral-800 font-normal leading-snug cursor-pointer"
                   >
                     {tForm("checkboxLabel")}
                   </FieldLabel>
@@ -120,16 +141,16 @@ const FormAuth = ({ type }: Props) => {
             )}
 
             {/* Submit Button */}
-            <Button
-              type="submit"
-              disabled={form.formState.isSubmitting}
-              className="w-full h-[52px] mt-8 rounded-none bg-black hover:bg-neutral-800 text-white font-semibold text-[11px] tracking-[0.2em] uppercase"
-            >
-              {t("submitButton")}
+            <Button type="submit" className="mt-4" disabled={isSubmitting}>
+              {isSubmitting ? (
+                <Loader2 className="size-5 animate-spin" />
+              ) : (
+                t("submitButton")
+              )}
             </Button>
 
             {/* Divider */}
-            <div className="flex items-center gap-4 my-8">
+            <div className="flex items-center gap-4 my-2">
               <div className="h-px bg-neutral-200 flex-1"></div>
               <span className="text-[10px] font-bold tracking-widest text-neutral-500 uppercase">
                 {tForm("or")}
@@ -143,7 +164,7 @@ const FormAuth = ({ type }: Props) => {
               variant="outline"
               className="w-full h-[52px] rounded-none border-neutral-300 hover:bg-neutral-50 text-neutral-900 font-semibold text-[11px] tracking-widest uppercase relative flex items-center justify-center gap-3"
             >
-              {/* Ícone simples do Google parecido com o do design */}
+              {/* Svg Google */}
               <svg
                 width="18"
                 height="18"
@@ -172,7 +193,7 @@ const FormAuth = ({ type }: Props) => {
             </Button>
 
             {/* Prompt link */}
-            <div className="mt-8 text-sm text-neutral-900 font-medium">
+            <div className="text-sm text-neutral-900 font-medium mt-4">
               {t("prompt")}{" "}
               <Link
                 // eslint-disable-next-line @typescript-eslint/no-explicit-any

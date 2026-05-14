@@ -50,7 +50,7 @@
     "SignIn": {
       "title": "Bem-vindo de volta",
       "description": "Entre na sua conta para acessar seus pedidos, desejos e preferências.",
-      "breadcrumb": "Início / Entrar",
+      "breadcrumb": "<link1>Início</link1><link2>Entrar</link2>",
       "submitButton": "Entrar",
       "prompt": "Ainda não tem uma conta?",
       "promptLink": "Criar Conta",
@@ -59,7 +59,7 @@
     "SignUp": {
       "title": "Criar uma conta",
       "description": "Junte-se à Noiré e seja o primeiro a descobrir novos lançamentos, ofertas exclusivas e muito mais.",
-      "breadcrumb": "Início / Criar Conta",
+      "breadcrumb": "<link1>Início</link1><link2>Criar Conta</link2>",
       "submitButton": "Criar Conta",
       "prompt": "Já tem uma conta?",
       "promptLink": "Entrar",
@@ -76,7 +76,9 @@
       "confirmPasswordPlaceholder": "Confirme sua senha",
       "checkboxLabel": "Concordo em receber e-mails de marketing e atualizações da NOIRÉ.",
       "or": "OU",
-      "continueWithGoogle": "Continuar com o Google"
+      "continueWithGoogle": "Continuar com o Google",
+      "showPasswordAlt": "Mostrar senha",
+      "hidePasswordAlt": "Ocultar senha"
     },
     "Errors": {
       "minLengthName": "O nome deve ter pelo menos 2 caracteres.",

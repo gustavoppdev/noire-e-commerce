@@ -1,9 +1,19 @@
 "use client";
 
+// React
+import { useState } from "react";
+
+// Next.js & Next-Intl
+import { useTranslations } from "next-intl";
+
+// Components
 import { Field, FieldError, FieldLabel } from "@/components/ui/field";
 import { Input } from "@/components/ui/input";
+
+// Lucide Icons
 import { Eye, EyeOff } from "lucide-react";
-import { useState } from "react";
+
+// React Hook Form
 import { Control, Controller, FieldValues, Path } from "react-hook-form";
 
 type Props<T extends FieldValues> = {
@@ -21,6 +31,7 @@ const FormInput = <T extends FieldValues>({
   name,
   control,
 }: Props<T>) => {
+  const t = useTranslations("Auth.Form");
   const [showPassword, setShowPassword] = useState(false);
 
   const handleShowPassword = () => {
@@ -35,7 +46,7 @@ const FormInput = <T extends FieldValues>({
         <Field data-invalid={fieldState.invalid} className="space-y-2">
           <FieldLabel
             htmlFor={field.name}
-            className="uppercase text-[10px] font-bold tracking-widest text-neutral-900"
+            className="uppercase text-[10px] font-semibold tracking-widest text-neutral-900"
           >
             {label}
           </FieldLabel>
@@ -52,12 +63,20 @@ const FormInput = <T extends FieldValues>({
               <button
                 type="button"
                 onClick={handleShowPassword}
-                className="absolute right-4 top-1/2 -translate-y-1/2 text-neutral-400 hover:text-neutral-600 transition-colors"
+                className="absolute right-2 top-1/2 -translate-y-1/2 text-neutral-400 hover:text-neutral-600 transition-colors p-2"
               >
                 {showPassword ? (
-                  <EyeOff className="w-[18px] h-[18px]" strokeWidth={1.5} />
+                  <EyeOff
+                    className="w-[18px] h-[18px]"
+                    strokeWidth={1.5}
+                    aria-label={t("showPasswordAlt")}
+                  />
                 ) : (
-                  <Eye className="w-[18px] h-[18px]" strokeWidth={1.5} />
+                  <Eye
+                    className="w-[18px] h-[18px]"
+                    strokeWidth={1.5}
+                    aria-label={t("hidePasswordAlt")}
+                  />
                 )}
               </button>
             )}
